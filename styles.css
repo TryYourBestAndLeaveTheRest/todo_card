@@ -165,6 +165,56 @@ input[type="checkbox"]:focus-visible {
   background: var(--status-done-bg);
 }
 
+.edit-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.edit-form input,
+.edit-form textarea,
+.edit-form select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--line);
+}
+
+.priority-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.priority-indicator--low {
+  background-color: #34d399;
+}
+
+.priority-indicator--medium {
+  background-color: #fbbF24;
+}
+
+.priority-indicator--high {
+  background-color: #ef4444;
+}
+
+.collapsible-section {
+  max-height: 5em; /* Adjust as needed */
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.collapsible-section.expanded {
+  max-height: 500px; /* Adjust as needed */
+}
+
+.overdue-indicator {
+  color: var(--priority);
+  font-weight: bold;
+}
+
 @media (max-width: 640px) {
   .page-shell {
     padding: 0.8rem;
